@@ -1,38 +1,68 @@
 # Swiggy Delivery Time Prediction
 
-This project is a simple Machine Learning case study that predicts how long a food delivery will take on Swiggy.
+This project is a Machine Learning case study that predicts food delivery times for Swiggy based on various factors like location, ratings, and price.
 
-## What is this project?
+## 📌 Project Overview
 
 Imagine you order food on an app like Swiggy. The app tells you it will arrive in "35 mins". How does it know that?
-This project builds a computer program (a model) that learns from past delivery data to guess these times.
+This project builds a **Decision Tree Regressor** model that learns from past delivery data to estimate these times.
 
-## How does it work?
+## 📊 Dataset Details
 
-The project follows these easy steps:
+The model is trained on a dataset of **8,680** restaurant orders.
 
-1.  **Read the Data**: We load a file (`swiggy.csv`) containing information about thousands of past orders (like restaurant location, price, ratings, and how long the delivery actually took).
-2.  **Clean the Data**: We remove any incomplete records so our model doesn't get confused.
-3.  **Understand the Data**: We look at things like:
-    - Which cities have the most orders?
-    - What is the average delivery time?
-    - How does the price or rating affect the time?
-4.  **Prepare the Data**: Computers understand numbers better than words. We convert city names and areas into numbers (a process called "One-Hot Encoding").
-5.  **Train the "Brain"**: We use a technique called **Decision Tree Regression**. Think of it like a flowchart the computer makes:
-    - _Is the distance far? -> Yes -> Add 20 mins._
-    - _Is the traffic bad? -> No -> Subtract 5 mins._
-      It learns these rules by itself from the data!
-6.  **Test the Model**: We hide some data from the computer and ask it to predict the time. Then we compare its guess to the real answer to see how accurate it is.
+- **Source**: `swiggy.csv`
+- **Features Used**:
+  - **City**: The city where the restaurant is located (9 unique cities).
+  - **Area**: Specific locality (833 unique areas).
+  - **Price**: Approximate cost for two people.
+  - **Avg ratings**: Average customer rating (out of 5).
+  - **Total ratings**: Number of ratings received.
+- **Target Variable**: `Delivery time` (in minutes).
 
-## Tools Used
+## 🔍 Key Insights from Data
 
-- **Python**: The programming language.
-- **Pandas**: For organizing data into tables (like Excel).
-- **Scikit-Learn**: For building the machine learning model.
+Before training, we analyzed the data and found:
 
-## How to Run it
+- **Average Delivery Time**: ~54 minutes.
+- **Fastest Delivery**: 20 minutes.
+- **Longest Delivery**: 109 minutes.
+- **Top Cities by Restaurant Count**:
+  1.  Kolkata (1346)
+  2.  Mumbai (1277)
+  3.  Chennai (1106)
+  4.  Pune (1090)
+  5.  Hyderabad (1075)
 
-You need a tool like **Jupyter Notebook** or **Google Colab**.
+## ⚙️ How It Works
 
-1.  Open the file `Harshit_Agrawal_Swiggy_Case_Study (1).ipynb`.
-2.  Run the code blocks one by one to see the results!
+1.  **Data Loading & Cleaning**: We load the data and remove rows with missing values to ensure quality.
+2.  **Preprocessing**:
+    - Numerical features (`Price`, `Ratings`) are used as is.
+    - Categorical features (`City`, `Area`) are converted into numbers using **One-Hot Encoding**, resulting in **845 input features**.
+3.  **Model Training**:
+    - Algorithm: **Decision Tree Regressor**
+    - Configuration: `max_depth=10` (to balance learning and overfitting).
+    - Split: 80% Training Data (6944 samples) / 20% Testing Data (1736 samples).
+4.  **Evaluation**:
+    - We test the model on unseen data to check its accuracy.
+
+## 📈 Model Performance
+
+- **Mean Absolute Error (MAE)**: **8.77 min**
+  - _Interpretation_: On average, the model's prediction is off by about ±9 minutes from the actual delivery time.
+- **R² Score**: **0.4039**
+  - _Interpretation_: The model explains about 40% of the variability in delivery times based on the available data.
+
+## 🛠️ Tools Used
+
+- **Python**: Core programming language.
+- **Pandas**: For data manipulation and analysis.
+- **Scikit-Learn**: For building and evaluating the machine learning model.
+
+## 🚀 How to Run
+
+1.  Clone this repository.
+2.  Ensure you have Python installed with `pandas` and `scikit-learn`.
+3.  Open the notebook `Harshit_Agrawal_Swiggy_Case_Study (1).ipynb` in Jupyter Notebook or Google Colab.
+4.  Run all cells to see the analysis and predictions in action!
