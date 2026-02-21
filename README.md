@@ -59,10 +59,52 @@ Before training, we analyzed the data and found:
 - **Python**: Core programming language.
 - **Pandas**: For data manipulation and analysis.
 - **Scikit-Learn**: For building and evaluating the machine learning model.
+- **Jupyter Notebook**: For interactive development and data visualization.
+
+## 📁 Project Structure
+
+```text
+.
+├── Harshit_Agrawal_Swiggy_Case_Study.ipynb  # Main analysis & model building notebook
+├── swiggy.csv                               # Dataset (not included in repo)
+└── README.md                                # Project documentation
+```
+
+## 🧪 Feature Engineering Ideas (Future)
+
+To improve the model's R² score, the following features could be explored:
+
+- **Time of Day**: Orders at lunch/dinner peaks might take longer.
+- **Day of Week**: Weekends vs. Weekdays.
+- **Weather Conditions**: Rain or extreme heat impacting delivery speed.
+- **Cuisine Type**: Some foods (like Pizza) may have specific preparation times.
+- **Distance**: Actual distance between the restaurant and the delivery point.
+
+## 🚀 Future Roadmap
+
+- [ ] Implement **Random Forest Regressor** to compare performance.
+- [ ] Use **XGBoost** or **LightGBM** for better predictive power.
+- [ ] Perform **Hyperparameter Tuning** using GridSearchCV.
+- [ ] Add data visualizations (Heatmaps, correlation plots).
 
 ## 🚀 How to Run
 
 1.  Clone this repository.
 2.  Ensure you have Python installed with `pandas` and `scikit-learn`.
-3.  Open the notebook `Harshit_Agrawal_Swiggy_Case_Study (1).ipynb` in Jupyter Notebook or Google Colab.
-4.  Run all cells to see the analysis and predictions in action!
+3.  Place the `swiggy.csv` dataset in the root directory.
+4.  Open the notebook `Harshit_Agrawal_Swiggy_Case_Study (1).ipynb` in Jupyter Notebook or Google Colab.
+5.  Run all cells to see the analysis and predictions in action!
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have ideas to improve the model or find any bugs, feel free to open an issue or submit a pull request.
+
+## 👤 Author
+
+**Harshit Agrawal**
+
+- [GitHub](https://github.com/harshitagrawal) _(Update with your actual link)_
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
