@@ -65,7 +65,7 @@ Before training, we analyzed the data and found:
 
 ```text
 .
-├── Harshit_Agrawal_Swiggy_Case_Study.ipynb  # Main analysis & model building notebook
+├── Swiggy_Delivery_Time_Prediction.ipynb  # Main analysis & model building notebook
 ├── swiggy.csv                               # Dataset (not included in repo)
 └── README.md                                # Project documentation
 ```
@@ -92,7 +92,7 @@ To improve the model's R² score, the following features could be explored:
 1.  Clone this repository.
 2.  Ensure you have Python installed with `pandas` and `scikit-learn`.
 3.  Place the `swiggy.csv` dataset in the root directory.
-4.  Open the notebook `Harshit_Agrawal_Swiggy_Case_Study (1).ipynb` in Jupyter Notebook or Google Colab.
+4.  Open the notebook `Swiggy_Delivery_Time_Prediction.ipynb` in Jupyter Notebook or Google Colab.
 5.  Run all cells to see the analysis and predictions in action!
 
 ## 🤝 Contributing
