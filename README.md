@@ -87,10 +87,16 @@ To improve the model's R² score, the following features could be explored:
 - [ ] Perform **Hyperparameter Tuning** using GridSearchCV.
 - [ ] Add data visualizations (Heatmaps, correlation plots).
 
+## 🛠️ Installation
+
+```bash
+pip install -r requirements.txt
+```
+
 ## 🚀 How to Run
 
 1.  Clone this repository.
-2.  Ensure you have Python installed with `pandas` and `scikit-learn`.
+2.  Install dependencies using `pip install -r requirements.txt`.
 3.  Place the `swiggy.csv` dataset in the root directory.
 4.  Open the notebook `Swiggy_Delivery_Time_Prediction.ipynb` in Jupyter Notebook or Google Colab.
 5.  Run all cells to see the analysis and predictions in action!
