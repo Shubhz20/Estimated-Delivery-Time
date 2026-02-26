@@ -66,6 +66,7 @@ Before training, we analyzed the data and found:
 ```text
 .
 ├── Swiggy_Delivery_Time_Prediction.ipynb  # Main analysis & model building notebook
+├── utils.py                                 # Data loading and processing utilities
 ├── swiggy.csv                               # Dataset (not included in repo)
 └── README.md                                # Project documentation
 ```
