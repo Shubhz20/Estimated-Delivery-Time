@@ -67,6 +67,7 @@ Before training, we analyzed the data and found:
 .
 ├── Swiggy_Delivery_Time_Prediction.ipynb  # Main analysis & model building notebook
 ├── utils.py                                 # Data loading and processing utilities
+├── train.py                                 # Training script for terminal execution
 ├── swiggy.csv                               # Dataset (not included in repo)
 └── README.md                                # Project documentation
 ```
